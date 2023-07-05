@@ -1,0 +1,16 @@
+/* !
+ ! Cascading Position:
+ !     below > above
+ ! */
+
+li {
+    color:red;
+    color:blue;
+}
+
+.a-class {
+    color:purple;
+}
+.another-class {
+    color:green;
+}

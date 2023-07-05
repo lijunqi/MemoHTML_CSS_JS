@@ -1,9 +1,14 @@
-/** Element Selector */
+/** Element Selector =============================== */
 h3 {
     background-color: aqua;
 }
 
-/** Class Selector
+li {
+    color: green
+}
+
+
+/** Class Selector =============================== 
  *  "class" is an attribute can be added to any HTML element. It groups these elements into class.
  *  Can be applied to many elements.
  */
@@ -11,14 +16,16 @@ h3 {
     color: red
 }
 
-/** Id Selector
+
+/** Id Selector =============================== 
  *  Unique: should be only applied to one element in a single HTML file.
  */
 #main {
     color:pink
 }
 
-/** Attribute Selector
+
+/** Attribute Selector =============================== 
  *  Can set value.
  */
 p[draggable="true"] {
@@ -27,7 +34,8 @@ p[draggable="true"] {
     font-family: Helvetica, sans-serif;
 }
 
-/** Universal Selector
+
+/** Universal Selector =============================== 
  *  For all elements.
  */
 * {

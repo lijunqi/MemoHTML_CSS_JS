@@ -1,0 +1,8 @@
+/* !
+ ! Cascading Type:
+ !     inline > internal > external
+ ! */
+
+li {
+    color:red;
+}

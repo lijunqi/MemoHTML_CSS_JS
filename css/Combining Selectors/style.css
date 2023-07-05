@@ -1,0 +1,52 @@
+/* *
+ ! 1. Group = Apply to both selectors
+ *    selector, selector {
+ *        color:red;
+ *    }
+ ! 2. Child = Apply to DIRECT child(only 1 depth level) of left side
+ *    parent_selector > child_selector {
+ *        color:firebrick;
+ *    }
+ ! 3. Descendant = Apply to a descendant of left side
+ *    ancestor_selector descendant_selector {
+ *        color:blue;
+ *    }
+ ! 4. Chaining = Apply where ALL selectors are true
+ *    selectorselector {
+ *        color:seagreen;
+ *    }
+ *    Example:
+ *      HTML:   <h1 id="title" class="big heading">Hello World</h1>
+ *      CSS:    h1#title.big.heading {color:red}
+ ! 5. Multiple Combiners
+ *    Example:
+ *      ancestor_selector chain_selectorselector {
+ *          font-size: 2rem;
+ *      }
+
+ */
+
+/* Group */
+h1, h2 {
+  color: blueviolet;
+}
+
+/* Child */
+.box > p {
+  color: firebrick;
+}
+
+/* Descendent */
+.box li {
+  color: blue;
+}
+
+/* Chained */
+li.done {
+  color: green;
+}
+
+/* Multiple Combiners */
+ul p.done {
+  font-size: 0.5rem;
+}
