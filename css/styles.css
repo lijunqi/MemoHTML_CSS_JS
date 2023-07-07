@@ -1,3 +1,4 @@
+/* ! CSS Selectors:  Choosing Where to Apply CSS */
 /** Element Selector =============================== */
 h3 {
     background-color: aqua;
@@ -9,7 +10,8 @@ li {
 
 
 /** Class Selector =============================== 
- *  "class" is an attribute can be added to any HTML element. It groups these elements into class.
+ * ! "class" is an attribute can be added to any HTML element. It groups these elements into class.
+ *  Example below: "red-text" is class name.
  *  Can be applied to many elements.
  */
 .red-text {
@@ -27,6 +29,8 @@ li {
 
 /** Attribute Selector =============================== 
  *  Can set value.
+ *  Example below: "p" is the element you want to select,
+ *                 "draggable" is the attribute you want to select
  */
 p[draggable="true"] {
     color:blue;
