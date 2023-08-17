@@ -22,7 +22,7 @@ $("button");
 // * Manipulate Text:
 // * text, innerHTML
 $("button").html("<em>Hey</em>")
-$("button").text("<em>Hey</em>")
+//$("button").text("<em>Hey</em>")
 
 // * Manipulate Attributes:
 $("img").attr("src", "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/JQuery-Logo.svg/2560px-JQuery-Logo.svg.png");

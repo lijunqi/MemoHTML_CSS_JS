@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="basic-page.css">
+    </head>
+    <body>
+        <div id="group-1">
+            <ol>
+                <li>First</li>
+                <li>Second</li>
+                <li>Third</li>
+                <li>Fourth</li>
+                <li>Fifth</li>
+            </ol>
+        </div>
+        <div id="group-2">
+            <ol>
+                <li>First</li>
+                <li>Second</li>
+                <li>Third</li>
+                <li>Fourth</li>
+                <li>Fifth</li>
+            </ol>
+        </div>
+        <button id="add-new-row">Add New Row</button>
+        <div id="output"></div>
+
+        <div class="row">
+            <div class="shape red rectangle"></div>
+            <div class="shape blue rectangle"></div>
+            <div class="shape yellow circle"></div>
+            <div class="shape green square"></div>
+        </div>
+        <div class="row">
+            <button type="button" class="hidden" id="show-all">Show All</button>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    </body>
+</html>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        // * Selector
+        $("#group-1 li:first").append("!");
+        $("#group-1 li").first().append("?");
+        $("#group-2 ol li").first().html("<em>First</em>");
+        $("#group-2 li:last").first().html("<em>Last</em>");
+        $("#group-2 li:gt(2)").append("(>3)");
+
+        // * Events
+        var count = 0;
+        $("#add-new-row").click(function(){
+            $("#output").append("<p>This is a new row: " + count + "</p>");
+            count++;
+        });
+
+        // * Effect
+        $(".shape").click(function(e){
+            $(e.target).hide();
+            $("#show-all").show();
+        });
+        $("#show-all").click(function(){
+            $(".shape").show(500, "linear", function(){
+                $("#show-all").hide(500, "linear");
+            });
+        })
+    });
+</script>

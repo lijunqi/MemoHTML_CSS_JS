@@ -1,0 +1,45 @@
+<html>
+ 
+<head>
+    <title>Learn AJAX</title>
+</head>
+ 
+<body>
+    <div id="output"></div>
+    <script>
+        var output = document.querySelector("#output");
+        var url = "https://api.myjson.com/bins/70rna";
+        var xhr = new XMLHttpRequest();
+        console.log('UNSENT', xhr.readyState);
+        
+        xhr.open('GET', url);
+        console.log('OPENED', xhr.readyState);
+
+        xhr.onprogress = function() {
+            console.log('LOADING', xhr.readyState);
+        };
+
+        xhr.onload = function () {
+            console.log('DONE', xhr.readyState);
+        };
+
+        xhr.send();
+/*
+https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState   
+**********************************************************
+0	UNSENT	Client has been created. open() not called yet.
+1	OPENED	open() has been called.
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	LOADING	Downloading; responseText holds partial data.
+4	DONE	The operation is complete.
+ 
+************************************************************
+*/
+      
+        /*        myObj.people.forEach(function (element) {
+                    console.log(element)
+                })*/
+    </script>
+</body>
+ 
+</html>

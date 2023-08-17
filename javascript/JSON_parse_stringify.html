@@ -1,0 +1,29 @@
+<html>
+ 
+<head>
+    <title>Learn AJAX</title>
+</head>
+ 
+<body>
+    <script>
+        var myObj = {
+            "people": [{
+                "firstName": "Laurence"
+                , "lastName": "Svekis"
+                , "age": 40
+                , "pass": true
+            }, {
+                "firstName": "Linda"
+                , "lastName": "Sveki"
+                , "age": 23
+                , "pass": true
+            }]
+        };
+        var myStr = '{"people":[{"firstName":"Laurence","lastName":"Svekis","age":40,"pass":true},{"firstName":"Linda","lastName":"Sveki","age":23,"pass":true}]}';
+        var myObj1 = JSON.parse(myStr);
+        var myStr1 = JSON.stringify(myObj);
+        console.log(myObj);
+    </script>
+</body>
+ 
+</html>
