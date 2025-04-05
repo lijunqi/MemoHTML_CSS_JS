@@ -1,0 +1,10 @@
+/* Your code goes here */
+
+.container {
+    display: flex;
+    flex-direction: row;
+    float: right;
+    border: 1px solid #fff;
+    width: 100%;
+}
+
